@@ -24,6 +24,8 @@ public class Carro {
     private int lugares;
     private int combustivel;
     private long numeroChassi;
+    private String marca;
+    private String modelo;
     private String cor;
     private Boolean som;
     private Boolean direcaoHidraulica;
@@ -31,14 +33,13 @@ public class Carro {
     private Boolean arCondicionado;
     private Date anoDeFabricacao;
 
-    public Carro(int pneus, int portas, int airBags, int lugares, int combustivel, long numeroChassi, String cor, Date anoDeFabricacao) {
+    public Carro(int pneus, int portas, int airBags, int lugares, int combustivel, long numeroChassi, Date anoDeFabricacao) {
         this.pneus = pneus;
         this.portas = portas;
         this.airBags = airBags;
         this.lugares = lugares;
         this.combustivel = combustivel;
         this.numeroChassi = numeroChassi;
-        this.cor = cor;
         this.anoDeFabricacao = anoDeFabricacao;
     }
 
@@ -140,6 +141,20 @@ public class Carro {
         this.anoDeFabricacao = anoDeFabricacao;
     }
 
-    
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String Modelo) {
+        this.modelo = Modelo;
+    }
     
 }
