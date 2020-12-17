@@ -1,28 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package atividadementorama2;
 
-import java.util.Date;
-
+import java.time.Year;
 /**
  *
- * @author Victor-Vanessa
+ * @author Victor
  */
 public class Carro {
     
-    public final int GASOLINA = 1;
-    public final int ALCOOL = 2;
-    public final int DIESEL = 3;
-    public final int GNV = 4;
     
     private int pneus;
     private int portas;
     private int airBags;
     private int lugares;
-    private int combustivel;
+    private String combustivel;
     private long numeroChassi;
     private String marca;
     private String modelo;
@@ -31,9 +21,11 @@ public class Carro {
     private Boolean direcaoHidraulica;
     private Boolean vidroEletrico;
     private Boolean arCondicionado;
-    private Date anoDeFabricacao;
+    private Year anoDeFabricacao;
 
-    public Carro(int pneus, int portas, int airBags, int lugares, int combustivel, long numeroChassi, Date anoDeFabricacao) {
+    public Carro(String modelo, String marca, int pneus, int portas, int airBags, int lugares, String combustivel, long numeroChassi, Year anoDeFabricacao) {
+        this.modelo = modelo;
+        this.marca = marca;
         this.pneus = pneus;
         this.portas = portas;
         this.airBags = airBags;
@@ -73,11 +65,11 @@ public class Carro {
         return lugares;
     }
     
-        public int getCombustivel() {
+        public String getCombustivel() {
         return combustivel;
     }
 
-    public void setCombustivel(int combustivel) {
+    public void setCombustivel(String combustivel) {
         this.combustivel = combustivel;
     }
     
@@ -133,11 +125,11 @@ public class Carro {
         this.arCondicionado = arCondicionado;
     }
 
-    public Date getAnoDeFabricacao() {
+    public Year getAnoDeFabricacao() {
         return anoDeFabricacao;
     }
 
-    public void setAnoDeFabricacao(Date anoDeFabricacao) {
+    public void setAnoDeFabricacao(Year anoDeFabricacao) {
         this.anoDeFabricacao = anoDeFabricacao;
     }
 
@@ -156,5 +148,25 @@ public class Carro {
     public void setModelo(String Modelo) {
         this.modelo = Modelo;
     }
+
+    @Override
+    public String toString() {
+        return "Carro{"  +  " Marca = " + marca 
+                + ",\n Modelo = " + modelo 
+                + ",\n Quantidade de Pneus = " + pneus 
+                + ",\n Portas = " + portas 
+                + ",\n Quantidade de Airbags? " + airBags 
+                + ",\n Lugares = " + lugares 
+                + ",\n Combustivel = " + combustivel 
+                + ",\n Número do Chassi = " + numeroChassi 
+                + ",\n cor = " + cor 
+                + ",\n som = " + som 
+                + ",\n Direção Hidraulica?" + direcaoHidraulica 
+                + ",\n Vidro Eletrico:" + vidroEletrico 
+                + ",\n arCondicionado = " + arCondicionado 
+                + ",\n anoDeFabricacao = " + anoDeFabricacao + '}';
+    }
+    
+    
     
 }
